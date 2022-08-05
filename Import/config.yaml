@@ -1,0 +1,12 @@
+server1 :
+    id : 1
+    ip : mc.p07.icu
+    port : 26613
+    user : root
+    password : Zyc644031332.
+server2 :
+    id : 2
+    ip : blog.p07.icu
+    port : 26613
+    user : root
+    password : Zyc644031332.
