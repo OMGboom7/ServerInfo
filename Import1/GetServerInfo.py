@@ -3,6 +3,7 @@
 
 import re
 import paramiko
+
 # https://www.cnblogs.com/klb561/p/9157569.html 服务器常用信息获取
 # https://www.jianshu.com/p/b9e942f3682c        网卡速率
 
@@ -116,9 +117,19 @@ def get_ethernet():
     eth = ret.search(data).group()
     client.close()
     return eth
+
+
 #
 # version = "系统版本：" + get_version()
 # print(version)
 # cpu = get_cpu()
 # for i in cpu:
 #     print(cpu)
+if __name__ == '__main__':
+    get_ethernet()
+    get_cpu()
+    get_memory()
+    get_hostname()
+    get_date()
+    get_version()
+    get_ifconfig()
