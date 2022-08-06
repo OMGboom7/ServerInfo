@@ -1,11 +1,11 @@
 #取所需要的内网IP
 server_ip=$( ifconfig -a | grep inet | grep -v inet6 | grep -v 127.0.0.1 | awk '{print $2}')
-echo server_ip
+echo "$server_ip"
 #取内存总值，单位为G，四舍五入
 memory=$(free -m|awk '/Mem/ {printf ("%.f\n",$2/1024)}')
-echo memory
+echo "$memory"
 #内存使用率
-memory_usage=
+memory_usage=$(free -m | awk 'NR==2{printf "Memory Usage: %s/%sMB (%.2f%%)\n", $3,$2,$3*100/$2 }')
 #取CPU核数
 # shellcheck disable=SC2126
 Cpu_num=$(grep processor /proc/cpuinfo|wc -l)
