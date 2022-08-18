@@ -3,7 +3,7 @@ import os
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Border, Alignment, Side
 
-from Import1 import GetPassword
+from Demo01 import GetPassword
 
 
 def create_excel():
