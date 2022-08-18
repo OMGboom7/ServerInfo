@@ -2,6 +2,7 @@ from xlsxwriter import workbook
 import configparser
 import time
 
+
 # https://blog.51cto.com/xiaofanqie/1770050
 def write_excel(file):
     # 生成 Excel 文件
@@ -21,7 +22,7 @@ def write_excel(file):
     # 第8列宽度
     worksheet.set_column(8, 9, 30)
     # 第9列宽度
-    worksheet.set_column(9, 10, 30)
+    worksheet.set_column(9, 10, 15)
     # 定义表头
     title = (
         '服务器IP',
