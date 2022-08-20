@@ -44,7 +44,6 @@ def create_excel(file):
     col = 0
     # 写入表头
     for item in title:
-        # item = unicode(item, "utf-8")
         worksheet.write(row, col, item, format_title)
         col += 1
     # 获取数据
